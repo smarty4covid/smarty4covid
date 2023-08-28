@@ -1,0 +1,1390 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:absolute:smarty#"
+     xml:base="urn:absolute:smarty"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="urn:absolute:smarty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:smarty#characterizedBy -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:smarty#characterizedBy">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#Characterization"/>
+        <rdfs:range rdf:resource="urn:absolute:smarty#Expert"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasAudio -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:smarty#hasAudio"/>
+    
+
+
+    <!-- urn:absolute:smarty#hasCharacterization -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:smarty#hasCharacterization">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#Audio"/>
+        <rdfs:range rdf:resource="urn:absolute:smarty#Characterization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasCoughAudio -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:smarty#hasCoughAudio">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:smarty#hasAudio"/>
+        <rdfs:domain rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <rdfs:range rdf:resource="urn:absolute:smarty#CoughAudio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasCovidTest -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:smarty#hasCovidTest">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <rdfs:range rdf:resource="urn:absolute:smarty#CovidTest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasDeepBreathingAudio -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:smarty#hasDeepBreathingAudio">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:smarty#hasAudio"/>
+        <rdfs:domain rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <rdfs:range rdf:resource="urn:absolute:smarty#DeepBreathingAudio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasDifficulty -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:smarty#hasDifficulty">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:smarty#hasSymptom"/>
+        <rdfs:domain rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <rdfs:range rdf:resource="urn:absolute:smarty#Difficulty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasPreexistingCondition -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:smarty#hasPreexistingCondition">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#User"/>
+        <rdfs:range rdf:resource="urn:absolute:smarty#PreexistingCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasRegularBreathingAudio -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:smarty#hasRegularBreathingAudio">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:smarty#hasAudio"/>
+        <rdfs:domain rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <rdfs:range rdf:resource="urn:absolute:smarty#RegularBreathingAudio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasSpeechAudio -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:smarty#hasSpeechAudio">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:smarty#hasAudio"/>
+        <rdfs:domain rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <rdfs:range rdf:resource="urn:absolute:smarty#SpeechAudio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasSymptom -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:smarty#hasSymptom">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <rdfs:range rdf:resource="urn:absolute:smarty#Symptom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasUserInstance -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:smarty#hasUserInstance">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#User"/>
+        <rdfs:range rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasVaccinationStatus -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:smarty#hasVaccinationStatus">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:smarty#canHoldBreath -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:smarty#canHoldBreath">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasBMI -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:smarty#hasBMI">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasBPM -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:smarty#hasBPM">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasDiastolicPressure -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:smarty#hasDiastolicPressure">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasFileName -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:smarty#hasFileName">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#Audio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:smarty#hasHeight">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasOxygenSaturation -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:smarty#hasOxygenSaturation">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasSystolicPressure -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:smarty#hasSystolicPressure">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasWeight -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:smarty#hasWeight">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasYearsNonSmoker -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:smarty#hasYearsNonSmoker">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#PastSmokerInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:smarty#hasYearsSmoking -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:smarty#hasYearsSmoking">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#SmokerInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:smarty#smokesCigarettesPerDay -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:smarty#smokesCigarettesPerDay">
+        <rdfs:domain rdf:resource="urn:absolute:smarty#SmokerInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:smarty#ABitAnxiousUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#ABitAnxiousUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AnxiousUserInstance"/>
+        <owl:disjointWith rdf:resource="urn:absolute:smarty#VeryAnxiousUserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AnxiousUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AnxiousUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <owl:disjointWith rdf:resource="urn:absolute:smarty#NotAnxiousUserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Asthma -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Asthma">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#LungCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleAbnormality -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleAbnormality">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Characterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleChoking -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleChoking">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleAbnormality"/>
+        <rdfs:comment>Audible SCTID: 249489001</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleDyspnoea -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleDyspnoea">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleAbnormality"/>
+        <rdfs:comment>Audible SCTID: 267036007</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleExpiratoryStridor -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleExpiratoryStridor">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleStridor"/>
+        <rdfs:comment>Audible SCTID: 301287002</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleInspiratoryStridor -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleInspiratoryStridor">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleStridor"/>
+        <rdfs:comment>Audible SCTID: 58596002</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleLowerRespiratoryTractInfection -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleLowerRespiratoryTractInfection">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleRespiratoryTractInfection"/>
+        <rdfs:comment>Audible SCTID: 50417007</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleNasalCongestion -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleNasalCongestion">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleAbnormality"/>
+        <rdfs:comment>Audible SCTID: 68235000</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleObstructiveLungDisease -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleObstructiveLungDisease">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleAbnormality"/>
+        <rdfs:comment>Audible SCTID: 13645005</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleProlongedExpiration -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleProlongedExpiration">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleAbnormality"/>
+        <rdfs:comment>Audible SCTID: 248586000</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleRespiratoryCrackles -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleRespiratoryCrackles">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleAbnormality"/>
+        <rdfs:comment>Audible SCTID: 48409008</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleRespiratoryTractInfection -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleRespiratoryTractInfection">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleAbnormality"/>
+        <rdfs:comment>Audible SCTID: 275498002</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleStridor -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleStridor">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleAbnormality"/>
+        <rdfs:comment>Audible SCTID: 70407001</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleUpperRespiratoryTractInfection -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleUpperRespiratoryTractInfection">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleRespiratoryTractInfection"/>
+        <rdfs:comment>Audible SCTID: 54150009</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#AudibleWheezing -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#AudibleWheezing">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleAbnormality"/>
+        <rdfs:comment>Audible SCTID: 56018004</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Audio -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Audio"/>
+    
+
+
+    <!-- urn:absolute:smarty#BarkingCoughCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#BarkingCoughCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#CoughCharacterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#BoosterVaccinated -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#BoosterVaccinated">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Vaccinated"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#BreathDiscomfort -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#BreathDiscomfort">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Respiratory"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Cancer -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Cancer">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#PreexistingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#CardiovascularOther -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#CardiovascularOther">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#HeartCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Characterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Characterization"/>
+    
+
+
+    <!-- urn:absolute:smarty#CompletePhraseSpeechCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#CompletePhraseSpeechCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#SpeechCharacterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#ConcentrateDifficulty -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#ConcentrateDifficulty">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Difficulty"/>
+        <rdfs:comment>SCTID: 60032008</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#CoronaryDisease -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#CoronaryDisease">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#HeartCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Cough -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Cough">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Respiratory"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#CoughAudio -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#CoughAudio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Audio"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#CoughCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#CoughCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Characterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#CovidTest -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#CovidTest"/>
+    
+
+
+    <!-- urn:absolute:smarty#CroupyCoughCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#CroupyCoughCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#CoughCharacterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#CysticFibrosis -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#CysticFibrosis">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#LungCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#DeepBreathingAudio -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#DeepBreathingAudio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Audio"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Diabetes -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Diabetes">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#PreexistingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#DiarrheaUpsetstomach -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#DiarrheaUpsetstomach">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+        <rdfs:comment>SCTID: 62315008</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Difficulty -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Difficulty">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Dizziness -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Dizziness">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+        <rdfs:comment>SCTID: 404640003</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#DryCough -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#DryCough">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Cough"/>
+        <rdfs:comment>SCTID: 11833005</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#DryCoughCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#DryCoughCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#CoughCharacterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#DryThroat -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#DryThroat">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+        <rdfs:comment>SCTID: 102618009</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Expert -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Expert"/>
+    
+
+
+    <!-- urn:absolute:smarty#ExposedUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#ExposedUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <owl:disjointWith rdf:resource="urn:absolute:smarty#MaybeExposedUserInstance"/>
+        <owl:disjointWith rdf:resource="urn:absolute:smarty#NotExposedUserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Fatigue -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Fatigue">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+        <rdfs:comment>SCTID: 84229001</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Female -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Female">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#User"/>
+        <owl:disjointWith rdf:resource="urn:absolute:smarty#Male"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#FullyVaccinated -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#FullyVaccinated">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Vaccinated"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#GoodQualityAudio -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#GoodQualityAudio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Audio"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#HIV -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#HIV">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#PreexistingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#HackingCoughCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#HackingCoughCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#CoughCharacterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#HasFever -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#HasFever">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+        <rdfs:comment>SCTID: 386661006</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Headache -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Headache">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+        <rdfs:comment>SCTID: 25064002</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#HeartAttack -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#HeartAttack">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#HeartCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#HeartCondition -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#HeartCondition">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#PreexistingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#HoarseSpeechCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#HoarseSpeechCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#SpeechCharacterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#HospitalizedAWeekAgoUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#HospitalizedAWeekAgoUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#PreviouslyHospitalizedUserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#HospitalizedMonthsAgoUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#HospitalizedMonthsAgoUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#PreviouslyHospitalizedUserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#HospitalizedUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#HospitalizedUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Hypertension -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Hypertension">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#HeartCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#IncompletePhraseSpeechCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#IncompletePhraseSpeechCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#SpeechCharacterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#InsufficientBreathDepth -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#InsufficientBreathDepth">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AudibleAbnormality"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Kidney -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Kidney">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#PreexistingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#LeaveBedDifficulty -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#LeaveBedDifficulty">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Difficulty"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#LeaveHomeDifficulty -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#LeaveHomeDifficulty">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Difficulty"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#LungCondition -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#LungCondition">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#PreexistingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Male -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Male">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#User"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#MaybeExposedUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#MaybeExposedUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <owl:disjointWith rdf:resource="urn:absolute:smarty#NotExposedUserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#MedicalAdvice -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#MedicalAdvice"/>
+    
+
+
+    <!-- urn:absolute:smarty#MildCoughCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#MildCoughCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#CoughCharacterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#MuscleAche -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#MuscleAche">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+        <rdfs:comment>SCTID: 68962001</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#NegativeTest -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#NegativeTest">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#CovidTest"/>
+        <owl:disjointWith rdf:resource="urn:absolute:smarty#PositiveTest"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#NeverSmokedInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#NeverSmokedInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#NotAnxiousUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#NotAnxiousUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#NotExposedUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#NotExposedUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#NotTravelledAbroadUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#NotTravelledAbroadUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <owl:disjointWith rdf:resource="urn:absolute:smarty#TravelledAbroadUserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#OKQualityAudio -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#OKQualityAudio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Audio"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#PCRTest -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#PCRTest">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#CovidTest"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#PartiallyVaccinated -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#PartiallyVaccinated">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Vaccinated"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#PastSmokerInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#PastSmokerInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+        <owl:disjointWith rdf:resource="urn:absolute:smarty#SmokerInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#PneumOther -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#PneumOther">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#LungCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#PoorQualityAudio -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#PoorQualityAudio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Audio"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#PositiveTest -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#PositiveTest">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#CovidTest"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#PreexistingCondition -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#PreexistingCondition"/>
+    
+
+
+    <!-- urn:absolute:smarty#PrepareMealDifficulty -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#PrepareMealDifficulty">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Difficulty"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#PreviouslyHospitalizedUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#PreviouslyHospitalizedUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#ProductiveCoughCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#ProductiveCoughCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#CoughCharacterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#PseudocoughCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#PseudocoughCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#CoughCharacterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#RapidTest -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#RapidTest">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#CovidTest"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#RegularBreathingAudio -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#RegularBreathingAudio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Audio"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#RepeatTest -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#RepeatTest">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#MedicalAdvice"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#RepeatTestIfChanges -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#RepeatTestIfChanges">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#MedicalAdvice"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Respiratory -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Respiratory">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#RespiratoryDeficiency -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#RespiratoryDeficiency">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#LungCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#RunnyNose -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#RunnyNose">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#SeekMedicalAdvice -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#SeekMedicalAdvice">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#MedicalAdvice"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#SelfCareDifficulty -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#SelfCareDifficulty">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Difficulty"/>
+        <rdfs:comment>Total self-care deficit; SCTID: 78629008
+Personal care disability: SCTID: 228151002</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#SelfTest -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#SelfTest">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#CovidTest"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#SevereCoughCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#SevereCoughCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#CoughCharacterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#SmokerInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#SmokerInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Sneezing -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Sneezing">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+        <rdfs:comment>SCTID: 162367006</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#SoreThroat -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#SoreThroat">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+        <rdfs:comment>SCTID: 162397003</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#SpeechAudio -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#SpeechAudio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Audio"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#SpeechCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#SpeechCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Characterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Spit -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Spit">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Stroke -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Stroke">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#PreexistingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Symptom -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Symptom"/>
+    
+
+
+    <!-- urn:absolute:smarty#TasteLoss -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#TasteLoss">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+        <rdfs:comment>SCTID: 36955009</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Transplant -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Transplant">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#PreexistingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#TravelledAbroadUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#TravelledAbroadUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Tremble -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Tremble">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Symptom"/>
+        <rdfs:comment>SCTID: 267079009</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#UnemployedUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#UnemployedUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Unvaccinated -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Unvaccinated">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#User -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#User"/>
+    
+
+
+    <!-- urn:absolute:smarty#UserEighties -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#UserEighties">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#User"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#UserFifties -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#UserFifties">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#User"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#UserFourties -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#UserFourties">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#User"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#UserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#UserInstance"/>
+    
+
+
+    <!-- urn:absolute:smarty#UserSeventies -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#UserSeventies">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#User"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#UserSixties -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#UserSixties">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#User"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#UserThirties -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#UserThirties">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#User"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#UserTwenties -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#UserTwenties">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#User"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#Vaccinated -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#Vaccinated">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#ValidAudio -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#ValidAudio">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Audio"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#ValveDisease -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#ValveDisease">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#HeartCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#VaperInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#VaperInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#VeryAnxiousUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#VeryAnxiousUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#AnxiousUserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#WetCough -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#WetCough">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#Cough"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#WhisperSpeechCharacterization -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#WhisperSpeechCharacterization">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#SpeechCharacterization"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#WorkAtHospitalUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#WorkAtHospitalUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#WorkAtServiceUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#WorkAtServiceUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#WorkAtStoreUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#WorkAtStoreUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:smarty#WorkFromHomeUserInstance -->
+
+    <owl:Class rdf:about="urn:absolute:smarty#WorkFromHomeUserInstance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:smarty#UserInstance"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="urn:absolute:smarty#GoodQualityAudio"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#OKQualityAudio"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#PoorQualityAudio"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="urn:absolute:smarty#PCRTest"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#RapidTest"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#SelfTest"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="urn:absolute:smarty#UnemployedUserInstance"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#WorkAtHospitalUserInstance"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#WorkAtServiceUserInstance"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#WorkAtStoreUserInstance"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#WorkFromHomeUserInstance"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="urn:absolute:smarty#UserEighties"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#UserFifties"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#UserFourties"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#UserSeventies"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#UserSixties"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#UserThirties"/>
+            <rdf:Description rdf:about="urn:absolute:smarty#UserTwenties"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
